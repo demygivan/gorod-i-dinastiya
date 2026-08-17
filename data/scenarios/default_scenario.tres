@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="ScenarioDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://data/scenarios/scenario_definition.gd" id="1_def"]
+
+[resource]
+script = ExtResource("1_def")
+id = "default_scenario"
+name_key = "scenario.default"
+starting_cash = 500.0
+starting_business_type = "bakery"
+starting_goods = Array[String](["flour", "bread"])
+simulation_seed = 12345
+demand_formula_id = "default_demand"
+starting_player_reputation = 50.0
+reputation_formula_id = "default_reputation"
+voting_formula_id = "default_voting"
+proposed_law_id = "trade_tax_reduction"
+council_vote_interval_days = 7
+council_first_vote_day = 7
+starting_npc_count = 20
+starting_npc_archetypes = Array[String](["peasant", "peasant", "peasant", "peasant", "peasant", "peasant", "laborer", "laborer", "laborer", "laborer", "craftsman", "craftsman", "craftsman", "merchant", "merchant", "elder", "elder", "noble", "peasant", "laborer"])
+npc_starting_cash = 100.0
+npc_income_per_day = 100.0
+shopping_hour_start = 10
+shopping_hour_end = 19
+tavern_hour = 20
+npc_archetype_pool = Array[String](["peasant", "laborer", "craftsman", "merchant", "elder", "noble"])

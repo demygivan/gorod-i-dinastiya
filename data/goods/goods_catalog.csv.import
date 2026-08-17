@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://dixchllwjprs6"
+
+[deps]
+
+files=["res://data/goods/goods_catalog.name.translation", "res://data/goods/goods_catalog.name.translation", "res://data/goods/goods_catalog.category.translation", "res://data/goods/goods_catalog.base.translation", "res://data/goods/goods_catalog.max.translation", "res://data/goods/goods_catalog.input.translation", "res://data/goods/goods_catalog.outputs.translation"]
+
+source_file="res://data/goods/goods_catalog.csv"
+dest_files=["res://data/goods/goods_catalog.name.translation", "res://data/goods/goods_catalog.name.translation", "res://data/goods/goods_catalog.category.translation", "res://data/goods/goods_catalog.base.translation", "res://data/goods/goods_catalog.max.translation", "res://data/goods/goods_catalog.input.translation", "res://data/goods/goods_catalog.outputs.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

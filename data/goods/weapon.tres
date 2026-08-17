@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="GoodDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://data/goods/good_definition.gd" id="1_def"]
+
+[resource]
+script = ExtResource("1_def")
+id = "weapon"
+name_key = "good.weapon"
+
+base_price = 35.0
+category = "equipment"
+max_stack = 40
+input_ids = Array[String](["iron"])

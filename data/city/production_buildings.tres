@@ -1,0 +1,286 @@
+[gd_resource type="Resource" script_class="BuildingSpawnPool" load_steps=29 format=3]
+
+[ext_resource type="Script" path="res://data/city/building_spawn_pool.gd" id="1_pool"]
+[ext_resource type="Script" path="res://data/city/building_spawn_entry.gd" id="2_entry"]
+
+[sub_resource type="Resource" id="entry_bakery"]
+script = ExtResource("2_entry")
+id = "bakery"
+name_key = "building.bakery"
+profession = "Baker"
+group = "Patron"
+slot_kinds = Array[String](["commercial"])
+weight = 10.0
+minimum_quantity = 1
+business_type_id = "bakery"
+
+[sub_resource type="Resource" id="entry_farm"]
+script = ExtResource("2_entry")
+id = "farm"
+name_key = "building.farm"
+profession = "Farmer"
+group = "Patron"
+slot_kinds = Array[String](["residential"])
+weight = 10.0
+minimum_quantity = 1
+business_type_id = "farm"
+
+[sub_resource type="Resource" id="entry_tavern"]
+script = ExtResource("2_entry")
+id = "tavern"
+name_key = "building.tavern"
+profession = "Brewer"
+group = "Patron"
+slot_kinds = Array[String](["commercial"])
+weight = 10.0
+minimum_quantity = 1
+business_type_id = "tavern"
+
+[sub_resource type="Resource" id="entry_fishing_hut"]
+script = ExtResource("2_entry")
+id = "fishing_hut"
+name_key = "building.fishing_hut"
+profession = "Fisherman"
+group = "Patron"
+slot_kinds = Array[String](["maritime"])
+weight = 10.0
+minimum_quantity = 1
+
+[sub_resource type="Resource" id="entry_windmill"]
+script = ExtResource("2_entry")
+id = "windmill"
+name_key = "building.windmill"
+profession = "Miller"
+group = "Patron"
+slot_kinds = Array[String](["commercial", "residential"])
+weight = 10.0
+minimum_quantity = 1
+business_type_id = "mill"
+
+[sub_resource type="Resource" id="entry_orchard"]
+script = ExtResource("2_entry")
+id = "orchard"
+name_key = "building.orchard"
+profession = "Gardener"
+group = "Patron"
+slot_kinds = Array[String](["residential"])
+weight = 10.0
+minimum_quantity = 1
+
+[sub_resource type="Resource" id="entry_smithy"]
+script = ExtResource("2_entry")
+id = "smithy"
+name_key = "building.smithy"
+profession = "Blacksmith"
+group = "Craftsman"
+slot_kinds = Array[String](["commercial"])
+weight = 10.0
+minimum_quantity = 1
+business_type_id = "smithery"
+
+[sub_resource type="Resource" id="entry_sewing_workshop"]
+script = ExtResource("2_entry")
+id = "sewing_workshop"
+name_key = "building.sewing_workshop"
+profession = "Tailor"
+group = "Craftsman"
+slot_kinds = Array[String](["commercial"])
+weight = 10.0
+minimum_quantity = 1
+business_type_id = "tailor"
+
+[sub_resource type="Resource" id="entry_carpenter_workshop"]
+script = ExtResource("2_entry")
+id = "carpenter_workshop"
+name_key = "building.carpenter_workshop"
+profession = "Carpenter"
+group = "Craftsman"
+slot_kinds = Array[String](["commercial"])
+weight = 10.0
+minimum_quantity = 1
+
+[sub_resource type="Resource" id="entry_stonecutter_workshop"]
+script = ExtResource("2_entry")
+id = "stonecutter_workshop"
+name_key = "building.stonecutter_workshop"
+profession = "Stonemason"
+group = "Craftsman"
+slot_kinds = Array[String](["commercial"])
+weight = 10.0
+minimum_quantity = 1
+
+[sub_resource type="Resource" id="entry_sawmill"]
+script = ExtResource("2_entry")
+id = "sawmill"
+name_key = "building.sawmill"
+profession = "Lumberjack"
+group = "Craftsman"
+slot_kinds = Array[String](["commercial", "residential"])
+weight = 10.0
+minimum_quantity = 1
+
+[sub_resource type="Resource" id="entry_mine"]
+script = ExtResource("2_entry")
+id = "mine"
+name_key = "building.mine"
+profession = "Miner"
+group = "Craftsman"
+slot_kinds = Array[String](["residential"])
+weight = 10.0
+minimum_quantity = 1
+business_type_id = "mine"
+
+[sub_resource type="Resource" id="entry_alchemist_shop"]
+script = ExtResource("2_entry")
+id = "alchemist_shop"
+name_key = "building.alchemist_shop"
+profession = "Alchemist"
+group = "Scholar"
+slot_kinds = Array[String](["commercial"])
+weight = 10.0
+minimum_quantity = 1
+
+[sub_resource type="Resource" id="entry_church"]
+script = ExtResource("2_entry")
+id = "church"
+name_key = "building.church"
+profession = "Priest"
+group = "Scholar"
+slot_kinds = Array[String](["commercial", "residential"])
+weight = 10.0
+minimum_quantity = 1
+
+[sub_resource type="Resource" id="entry_infirmary"]
+script = ExtResource("2_entry")
+id = "infirmary"
+name_key = "building.infirmary"
+profession = "Physician"
+group = "Scholar"
+slot_kinds = Array[String](["commercial"])
+weight = 10.0
+minimum_quantity = 1
+
+[sub_resource type="Resource" id="entry_cemetery"]
+script = ExtResource("2_entry")
+id = "cemetery"
+name_key = "building.cemetery"
+profession = "Gravedigger"
+group = "Scholar"
+slot_kinds = Array[String](["cemetery"])
+weight = 10.0
+minimum_quantity = 1
+
+[sub_resource type="Resource" id="entry_moneylender_office"]
+script = ExtResource("2_entry")
+id = "moneylender_office"
+name_key = "building.moneylender_office"
+profession = "Banker"
+group = "Scholar"
+slot_kinds = Array[String](["commercial"])
+weight = 10.0
+minimum_quantity = 1
+
+[sub_resource type="Resource" id="entry_thieves_den"]
+script = ExtResource("2_entry")
+id = "thieves_den"
+name_key = "building.thieves_den"
+profession = "Thief"
+group = "Rogue"
+slot_kinds = Array[String](["commercial", "residential"])
+weight = 10.0
+minimum_quantity = 1
+
+[sub_resource type="Resource" id="entry_bandit_camp"]
+script = ExtResource("2_entry")
+id = "bandit_camp"
+name_key = "building.bandit_camp"
+profession = "Bandit"
+group = "Rogue"
+slot_kinds = Array[String](["residential"])
+weight = 10.0
+minimum_quantity = 1
+
+[sub_resource type="Resource" id="entry_traveling_show"]
+script = ExtResource("2_entry")
+id = "traveling_show"
+name_key = "building.traveling_show"
+profession = "Performer"
+group = "Rogue"
+slot_kinds = Array[String](["commercial", "residential"])
+weight = 10.0
+minimum_quantity = 1
+
+[sub_resource type="Resource" id="entry_mercenary_barracks"]
+script = ExtResource("2_entry")
+id = "mercenary_barracks"
+name_key = "building.mercenary_barracks"
+profession = "Mercenary"
+group = "Rogue"
+slot_kinds = Array[String](["commercial"])
+weight = 10.0
+minimum_quantity = 1
+
+[sub_resource type="Resource" id="entry_pirate_hideout"]
+script = ExtResource("2_entry")
+id = "pirate_hideout"
+name_key = "building.pirate_hideout"
+profession = "Pirate"
+group = "Rogue"
+slot_kinds = Array[String](["maritime"])
+weight = 10.0
+minimum_quantity = 1
+
+[sub_resource type="Resource" id="entry_watchtower"]
+script = ExtResource("2_entry")
+id = "watchtower"
+name_key = "building.watchtower"
+profession = "Civil"
+group = "Infrastructure"
+slot_kinds = Array[String](["residential", "commercial"])
+weight = 10.0
+minimum_quantity = 0
+
+[sub_resource type="Resource" id="entry_warehouse"]
+script = ExtResource("2_entry")
+id = "warehouse"
+name_key = "building.warehouse"
+profession = "Civil"
+group = "Infrastructure"
+slot_kinds = Array[String](["commercial", "maritime"])
+weight = 10.0
+minimum_quantity = 0
+
+[sub_resource type="Resource" id="entry_hut"]
+script = ExtResource("2_entry")
+id = "hut"
+name_key = "building.hut"
+profession = "Civil"
+group = "Infrastructure"
+slot_kinds = Array[String](["residential"])
+weight = 10.0
+minimum_quantity = 0
+
+[sub_resource type="Resource" id="entry_house"]
+script = ExtResource("2_entry")
+id = "house"
+name_key = "building.house"
+profession = "Civil"
+group = "Infrastructure"
+slot_kinds = Array[String](["residential"])
+weight = 10.0
+minimum_quantity = 0
+
+[sub_resource type="Resource" id="entry_mansion"]
+script = ExtResource("2_entry")
+id = "mansion"
+name_key = "building.mansion"
+profession = "Civil"
+group = "Infrastructure"
+slot_kinds = Array[String](["residential"])
+weight = 10.0
+minimum_quantity = 0
+
+[resource]
+script = ExtResource("1_pool")
+id = "production"
+entries = [SubResource("entry_bakery"), SubResource("entry_farm"), SubResource("entry_tavern"), SubResource("entry_fishing_hut"), SubResource("entry_windmill"), SubResource("entry_orchard"), SubResource("entry_smithy"), SubResource("entry_sewing_workshop"), SubResource("entry_carpenter_workshop"), SubResource("entry_stonecutter_workshop"), SubResource("entry_sawmill"), SubResource("entry_mine"), SubResource("entry_alchemist_shop"), SubResource("entry_church"), SubResource("entry_infirmary"), SubResource("entry_cemetery"), SubResource("entry_moneylender_office"), SubResource("entry_thieves_den"), SubResource("entry_bandit_camp"), SubResource("entry_traveling_show"), SubResource("entry_mercenary_barracks"), SubResource("entry_pirate_hideout"), SubResource("entry_watchtower"), SubResource("entry_warehouse"), SubResource("entry_hut"), SubResource("entry_house"), SubResource("entry_mansion")]

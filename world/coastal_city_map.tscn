@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://world/coastal_city_map.gd" id="1_map"]
+[ext_resource type="Script" path="res://world/city_camera.gd" id="2_camera"]
+[ext_resource type="Script" path="res://world/day_night_overlay.gd" id="3_daynight"]
+[ext_resource type="Script" path="res://world/npc_view_manager.gd" id="4_npc_mgr"]
+[ext_resource type="PackedScene" path="res://world/player_view.tscn" id="5_player"]
+
+[node name="CoastalCityMap" type="Node2D"]
+script = ExtResource("1_map")
+
+[node name="DayNight" type="CanvasModulate" parent="."]
+script = ExtResource("3_daynight")
+
+[node name="ground_layer" type="TileMapLayer" parent="."]
+z_index = 0
+y_sort_enabled = true
+collision_enabled = true
+
+[node name="water_layer" type="TileMapLayer" parent="."]
+z_index = 1
+y_sort_enabled = true
+collision_enabled = true
+
+[node name="plaza_layer" type="TileMapLayer" parent="."]
+z_index = 2
+y_sort_enabled = true
+collision_enabled = true
+
+[node name="road_layer" type="TileMapLayer" parent="."]
+z_index = 3
+y_sort_enabled = true
+collision_enabled = true
+
+[node name="obstacle_layer" type="TileMapLayer" parent="."]
+z_index = 4
+y_sort_enabled = true
+collision_enabled = true
+
+[node name="slots" type="Node2D" parent="."]
+z_index = 10
+y_sort_enabled = true
+
+[node name="Buildings" type="Node2D" parent="."]
+z_index = 11
+y_sort_enabled = true
+
+[node name="PointsOfInterest" type="Node2D" parent="."]
+
+[node name="HomeDistrict" type="Node2D" parent="PointsOfInterest"]
+
+[node name="NpcLayer" type="Node2D" parent="."]
+z_index = 12
+y_sort_enabled = true
+
+[node name="NpcViewManager" type="Node2D" parent="NpcLayer"]
+script = ExtResource("4_npc_mgr")
+
+[node name="PlayerView" parent="NpcLayer" instance=ExtResource("5_player")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(640, 480)
+script = ExtResource("2_camera")

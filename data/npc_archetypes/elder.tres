@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="NpcArchetypeDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://data/npc_archetypes/npc_archetype_definition.gd" id="1_def"]
+
+[resource]
+script = ExtResource("1_def")
+archetype_id = "elder"
+name_key = "npc.archetype.elder"
+
+income_per_day = 15.0
+price_sensitivity = 1.1
+preferred_goods = Array[String](["bread", "medicine"])
+political_alignment = 0.0

@@ -1,0 +1,207 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://ui/finance_debug.gd" id="1_script"]
+[ext_resource type="Script" path="res://core/systems/demand_system.gd" id="2_demand"]
+
+[node name="FinanceDebug" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="DemandSystem" type="Node" parent="."]
+script = ExtResource("2_demand")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="RootVBox" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="HeaderLabel" type="Label" parent="MarginContainer/RootVBox"]
+layout_mode = 2
+text = "Finance Debug — bakery (read-only)"
+
+[node name="DayLabel" type="Label" parent="MarginContainer/RootVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Day 1, 08:00"
+
+[node name="BodySplit" type="HSplitContainer" parent="MarginContainer/RootVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+split_offset = 420
+
+[node name="LeftPanel" type="VBoxContainer" parent="MarginContainer/RootVBox/BodySplit"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="CashLabel" type="Label" parent="MarginContainer/RootVBox/BodySplit/LeftPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Cash: —"
+
+[node name="TodayTitle" type="Label" parent="MarginContainer/RootVBox/BodySplit/LeftPanel"]
+layout_mode = 2
+text = "Today"
+
+[node name="SummaryGrid" type="GridContainer" parent="MarginContainer/RootVBox/BodySplit/LeftPanel"]
+layout_mode = 2
+theme_override_constants/h_separation = 12
+theme_override_constants/v_separation = 4
+columns = 2
+
+[node name="RevenueCaption" type="Label" parent="MarginContainer/RootVBox/BodySplit/LeftPanel/SummaryGrid"]
+layout_mode = 2
+text = "Revenue"
+
+[node name="RevenueLabel" type="Label" parent="MarginContainer/RootVBox/BodySplit/LeftPanel/SummaryGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+
+[node name="ExpensesCaption" type="Label" parent="MarginContainer/RootVBox/BodySplit/LeftPanel/SummaryGrid"]
+layout_mode = 2
+text = "Expenses"
+
+[node name="ExpensesLabel" type="Label" parent="MarginContainer/RootVBox/BodySplit/LeftPanel/SummaryGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+
+[node name="ProfitCaption" type="Label" parent="MarginContainer/RootVBox/BodySplit/LeftPanel/SummaryGrid"]
+layout_mode = 2
+text = "Net profit"
+
+[node name="ProfitLabel" type="Label" parent="MarginContainer/RootVBox/BodySplit/LeftPanel/SummaryGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+
+[node name="SalesCaption" type="Label" parent="MarginContainer/RootVBox/BodySplit/LeftPanel/SummaryGrid"]
+layout_mode = 2
+text = "Sales"
+
+[node name="SalesLabel" type="Label" parent="MarginContainer/RootVBox/BodySplit/LeftPanel/SummaryGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+
+[node name="MissedCaption" type="Label" parent="MarginContainer/RootVBox/BodySplit/LeftPanel/SummaryGrid"]
+layout_mode = 2
+text = "Missed sales"
+
+[node name="MissedLabel" type="Label" parent="MarginContainer/RootVBox/BodySplit/LeftPanel/SummaryGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+
+[node name="ReputationCaption" type="Label" parent="MarginContainer/RootVBox/BodySplit/LeftPanel/SummaryGrid"]
+layout_mode = 2
+text = "Player reputation"
+
+[node name="ReputationLabel" type="Label" parent="MarginContainer/RootVBox/BodySplit/LeftPanel/SummaryGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "50"
+
+[node name="ReputationMultCaption" type="Label" parent="MarginContainer/RootVBox/BodySplit/LeftPanel/SummaryGrid"]
+layout_mode = 2
+text = "Demand mult"
+
+[node name="ReputationMultLabel" type="Label" parent="MarginContainer/RootVBox/BodySplit/LeftPanel/SummaryGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "x1.00 demand"
+
+[node name="CostMultCaption" type="Label" parent="MarginContainer/RootVBox/BodySplit/LeftPanel/SummaryGrid"]
+layout_mode = 2
+text = "Law cost mult"
+
+[node name="CostMultLabel" type="Label" parent="MarginContainer/RootVBox/BodySplit/LeftPanel/SummaryGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "x1.00 daily cost"
+
+[node name="PoliticsTitle" type="Label" parent="MarginContainer/RootVBox/BodySplit/LeftPanel"]
+layout_mode = 2
+text = "Politics (read-only + campaign)"
+
+[node name="ProposedLawLabel" type="Label" parent="MarginContainer/RootVBox/BodySplit/LeftPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Proposed: —"
+
+[node name="LastVoteLabel" type="Label" parent="MarginContainer/RootVBox/BodySplit/LeftPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Last vote: —"
+
+[node name="ActiveLawsLabel" type="Label" parent="MarginContainer/RootVBox/BodySplit/LeftPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+autowrap_mode = 2
+text = "Active laws: —"
+
+[node name="NextVoteLabel" type="Label" parent="MarginContainer/RootVBox/BodySplit/LeftPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Next vote: —"
+
+[node name="CampaignButton" type="Button" parent="MarginContainer/RootVBox/BodySplit/LeftPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Campaign (−50 cash)"
+
+[node name="StorageTitle" type="Label" parent="MarginContainer/RootVBox/BodySplit/LeftPanel"]
+layout_mode = 2
+text = "Storage (good → qty)"
+
+[node name="StorageList" type="ItemList" parent="MarginContainer/RootVBox/BodySplit/LeftPanel"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RightPanel" type="VBoxContainer" parent="MarginContainer/RootVBox/BodySplit"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="PricesTitle" type="Label" parent="MarginContainer/RootVBox/BodySplit/RightPanel"]
+layout_mode = 2
+text = "Prices (good → level → price)"
+
+[node name="PricesList" type="ItemList" parent="MarginContainer/RootVBox/BodySplit/RightPanel"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+
+[node name="HistoryTitle" type="Label" parent="MarginContainer/RootVBox/BodySplit/RightPanel"]
+layout_mode = 2
+text = "History (last 30 days)"
+
+[node name="HistoryList" type="ItemList" parent="MarginContainer/RootVBox/BodySplit/RightPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HintLabel" type="Label" parent="MarginContainer/RootVBox"]
+layout_mode = 2
+text = "F6 to run. Speed x4 in main HUD. Council vote every 7 days from Day 7."
+
+[connection signal="pressed" from="MarginContainer/RootVBox/BodySplit/LeftPanel/CampaignButton" to="." method="_on_campaign_pressed"]

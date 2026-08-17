@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="NpcArchetypeDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://data/npc_archetypes/npc_archetype_definition.gd" id="1_def"]
+
+[resource]
+script = ExtResource("1_def")
+archetype_id = "craftsman"
+name_key = "npc.archetype.craftsman"
+
+income_per_day = 18.0
+price_sensitivity = 1.0
+preferred_goods = Array[String](["bread", "tools", "clothing"])
+political_alignment = 0.1

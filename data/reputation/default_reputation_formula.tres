@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ReputationFormula" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://data/reputation/reputation_formula.gd" id="1_def"]
+
+[resource]
+script = ExtResource("1_def")
+id = "default_reputation"
+min_value = 0.0
+max_value = 100.0
+default_value = 50.0
+demand_mult_at_min = 0.75
+demand_mult_at_max = 1.25

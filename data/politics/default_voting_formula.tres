@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="VotingFormula" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://data/politics/voting_formula.gd" id="1_def"]
+
+[resource]
+script = ExtResource("1_def")
+id = "default_voting"
+base_yes_score = 0.5
+alignment_weight = 0.2
+relationship_weight = 0.25
+self_interest_weight = 0.15
+relationship_self_interest_min = 55.0
+campaign_bonus_per_shift = 0.12
+max_campaign_bonus = 0.24
+pass_threshold = 0.5

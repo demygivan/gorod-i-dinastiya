@@ -1,0 +1,24 @@
+id,name_ru,name_key,category,base_price,max_stack,input_ids,outputs
+grain,Зерно,GOOD_GRAIN,raw,3,200,,"flour, ale"
+wool,Шерсть,GOOD_WOOL,raw,8,150,,cloth
+grapes,Виноград,GOOD_GRAPES,raw,7,150,,wine
+wood,Древесина,GOOD_WOOD,raw,4,200,,tools
+ore,Руда,GOOD_ORE,raw,8,200,,iron
+coal,Уголь,GOOD_COAL,raw,7,200,,iron
+herbs,Травы,GOOD_HERBS,raw,9,100,,medicine
+vegetables,Овощи,GOOD_VEGETABLES,food,6,150,,
+meat,Мясо,GOOD_MEAT,food,14,100,,leather
+fish,Рыба,GOOD_FISH,food,12,100,,
+spices,Специи,GOOD_SPICES,food,25,50,,
+flour,Мука,GOOD_FLOUR,material,6,150,grain,bread
+iron,Железо,GOOD_IRON,material,15,120,"ore, coal","tools, weapon, armor"
+cloth,Ткань,GOOD_CLOTH,material,12,100,wool,clothing
+leather,Кожа,GOOD_LEATHER,material,10,100,meat,armor
+bread,Хлеб,GOOD_BREAD,food,10,100,flour,
+ale,Эль,GOOD_ALE,drink,5,120,grain,
+wine,Вино,GOOD_WINE,drink,18,80,grapes,
+clothing,Одежда,GOOD_CLOTHING,craft,20,60,cloth,
+tools,Инструменты,GOOD_TOOLS,craft,22,60,"iron, wood",
+weapon,Оружие,GOOD_WEAPON,equipment,35,40,iron,
+armor,Доспех,GOOD_ARMOR,equipment,45,30,"iron, leather",
+medicine,Лекарство,GOOD_MEDICINE,medicine,28,50,herbs,

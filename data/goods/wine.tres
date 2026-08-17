@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="GoodDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://data/goods/good_definition.gd" id="1_def"]
+
+[resource]
+script = ExtResource("1_def")
+id = "wine"
+name_key = "good.wine"
+
+base_price = 18.0
+category = "drink"
+max_stack = 80
+input_ids = Array[String](["grapes"])

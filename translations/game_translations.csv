@@ -1,0 +1,180 @@
+keys,en,ru
+good.grain,Grain,Зерно
+good.wool,Wool,Шерсть
+good.grapes,Grapes,Виноград
+good.flour,Flour,Мука
+good.bread,Bread,Хлеб
+good.vegetables,Vegetables,Овощи
+good.meat,Meat,Мясо
+good.fish,Fish,Рыба
+good.spices,Spices,Специи
+good.ale,Ale,Эль
+good.wine,Wine,Вино
+good.herbs,Herbs,Травы
+good.ore,Ore,Руда
+good.coal,Coal,Уголь
+good.wood,Wood,Древесина
+good.iron,Iron,Железо
+good.cloth,Cloth,Ткань
+good.leather,Leather,Кожа
+good.clothing,Clothing,Одежда
+good.tools,Tools,Инструменты
+good.weapon,Weapon,Оружие
+good.armor,Armor,Доспех
+good.medicine,Medicine,Лекарство
+label.category.food,Food,Еда
+label.category.drink,Drink,Напитки
+label.category.raw,Raw materials,Сырьё
+label.category.material,Materials,Материалы
+label.category.craft,Crafts,Изделия
+label.category.equipment,Equipment,Снаряжение
+label.category.medicine,Medicine,Медицина
+business.bakery,Bakery,Пекарня
+business.mill,Mill,Мельница
+business.farm,Farm,Ферма
+business.tavern,Tavern,Таверна
+building.house,House,Дом
+building.hut,Hut,Хижина
+building.mansion,Mansion,Особняк
+building.town_hall,Town Hall,Мэрия
+building.bakery,Bakery,Пекарня
+building.farm,Farm,Ферма
+building.tavern,Tavern,Таверна
+building.fishing_hut,Fishing Hut,Рыбацкая хижина
+building.windmill,Windmill,Мельница
+building.orchard,Orchard,Сад
+building.smithy,Smithy,Кузница
+building.sewing_workshop,Sewing Workshop,Швейная мастерская
+building.carpenter_workshop,Carpenter's Workshop,Плотницкая
+building.stonecutter_workshop,Stonecutter's Workshop,Каменотесная
+building.sawmill,Sawmill,Лесопилка
+building.mine,Mine,Шахта
+building.alchemist_shop,Alchemist's Shop,Лавка алхимика
+building.church,Church,Церковь
+building.infirmary,Infirmary,Лазарет
+building.cemetery,Cemetery,Кладбище
+building.moneylender_office,Moneylender's Office,Контора ростовщика
+building.thieves_den,Thieves' Den,Воровской притон
+building.bandit_camp,Bandit Camp,Лагерь бандитов
+building.traveling_show,Traveling Show,Бродячий театр
+building.mercenary_barracks,Mercenary Barracks,Казарма наёмников
+building.pirate_hideout,Pirate Hideout,Пиратское убежище
+building.watchtower,Watchtower,Сторожевая башня
+building.warehouse,Warehouse,Склад
+business.mine,Mine,Шахта
+business.smithery,Smithery,Кузница
+business.tailor,Tailor,Портной
+scenario.default,Standard start,Обычное начало
+npc.archetype.peasant,Peasant,Крестьянин
+npc.archetype.craftsman,Craftsman,Ремесленник
+npc.archetype.merchant,Merchant,Купец
+npc.archetype.noble,Noble,Дворянин
+npc.archetype.laborer,Laborer,Рабочий
+npc.archetype.elder,Elder,Старейшина
+law.trade_tax_reduction,Trade tax reduction,Снижение торгового налога
+label.time.day_clock,"Day {day}, {hour}:{minute}","День {day}, {hour}:{minute}"
+label.time.npcs_suffix,| NPCs {count},| NPC {count}
+label.simulation.running,running,идёт
+label.simulation.paused,paused,пауза
+label.simulation.status,"Simulation: {state}, speed x{speed}","Симуляция: {state}, скорость x{speed}"
+label.hud.goods_title,Goods (Guild 2),Товары (Guild 2)
+label.hud.demand_title,City demand,Спрос города
+label.hud.demand_header,Good	Demand,Товар	Спрос
+label.hud.demand_row,{name}	{qty},{name}	{qty}
+label.hud.demand_empty,(no demand),"(нет данных)"
+label.business.click_building,Business: (click a building),Бизнес: (клик по зданию)
+label.business.not_found,Business: not found,Бизнес: не найден
+label.business.not_found_short,Cash: (business not found),Касса: (бизнес не найден)
+label.business.title,Business: {name},Бизнес: {name}
+label.cash.na,Cash: n/a,Касса: —
+label.cash.amount,Cash: {amount},Касса: {amount}
+label.cash.placeholder,Cash: —,Касса: —
+label.storage.na,Storage: n/a,Склад: —
+label.storage.summary,Storage: {summary},Склад: {summary}
+label.storage.placeholder,Storage: —,Склад: —
+label.storage.empty,(empty),(пусто)
+label.price.na,Prices: n/a,Цены: —
+label.price.good_line,"{name}: Lv.{level} · {price} (base {base})","{name}: ур.{level} · {price} (база {base})"
+label.price.bread_level,"Bread: Lv. {level} ({sign}{percent}% to base)","Хлеб: ур. {level} ({sign}{percent}% к базе)"
+label.price.bread_placeholder,Price (bread): —,Цена (хлеб): —
+label.price.bread_level_short,Bread price level,Уровень цены хлеба
+label.price.bread_debug,"Bread: level {level}, price {price}","Хлеб: ур. {level}, цена {price}"
+label.finance.today_na,Today: n/a,Сегодня: —
+label.finance.today_summary,"Today revenue: {revenue} | expenses: {expenses} | missed: {missed}","Выручка: {revenue} | расходы: {expenses} | упущено: {missed}"
+label.finance.last_tick_na,Last tick: n/a,Последний тик: —
+label.finance.last_tick,"Last tick: sales {sales}, missed {missed}, revenue +{revenue}","Тик: продано {sales}, упущено {missed}, +{revenue}"
+label.finance.daily_placeholder,Daily revenue/expenses: —,Выручка/расходы: —
+label.finance.last_tick_placeholder,Last tick: —,Последний тик: —
+label.finance.today,Today,Сегодня
+label.finance.revenue,Revenue,Выручка
+label.finance.expenses,Expenses,Расходы
+label.finance.net_profit,Net profit,Чистая прибыль
+label.finance.sales,Sales,Продажи
+label.finance.missed_sales,Missed sales,Упущенные продажи
+action.pause,Pause,Пауза
+action.resume,Resume,Продолжить
+action.speed.x1,x1,x1
+action.speed.x2,x2,x2
+action.speed.x4,x4,x4
+action.buy_flour,Buy flour x10,Купить муку x10
+action.save,Save,Сохранить
+action.load,Load,Загрузить
+action.run_demand,Run daily demand,Запустить спрос
+action.apply_daily_costs,Apply daily costs,Списать расходы
+action.campaign.law,Campaign (−50 cash),Агитация (−50)
+action.locale.en,EN,EN
+action.locale.ru,RU,RU
+label.hud.demand_hint,"NPC shopping 10:00–19:00, tavern 20:00","Покупки жителей 10:00–19:00, таверна 20:00"
+msg.demand.day_result,"Day {day}: sold {sales}, missed {missed} (+{revenue})","День {day}: продано {sales}, упущено {missed} (+{revenue})"
+msg.demand.tick_debug,"Tick day {day}: sales={sales} missed={missed} revenue={revenue}","День {day}: sales={sales} missed={missed} revenue={revenue}"
+msg.command.ok,OK,OK
+msg.command.fail,FAIL: {error},ОШИБКА: {error}
+label.goods.category_header,— {name} —,— {name} —
+label.goods.catalog_item,{name} · base {price}{recipe},{name} · база {price}{recipe}
+label.recipe.inputs, ← {names}, ← {names}
+label.recipe.outputs, → {names}, → {names}
+label.debug_slice.title,Daily Demand Debug,Отладка спроса
+label.npc.list_header,NPCs (id | archetype | cash | last purchase),NPC (id | архетип | касса | покупка)
+label.npc.table_header,ID	Archetype	Cash	Last purchase,ID	Архетип	Касса	Последняя покупка
+label.npc.last_purchase,D{day} {good} @{business} {status},D{day} {good} @{business} {status}
+label.npc.purchase_ok,OK,OK
+label.npc.purchase_fail,X,X
+label.save.slot_placeholder,slot name,имя слота
+label.log.placeholder,Log: —,Лог: —
+label.debug.cash_summary,"Cash: {cash} | NPCs: {count} | Seed: {seed}","Касса: {cash} | NPC: {count} | Seed: {seed}"
+msg.save.saved,"Saved slot ""{slot}"" (Day {day})","Сохранено ""{slot}"" (день {day})"
+msg.save.fail,Save FAIL: {error},Ошибка сохранения: {error}
+msg.save.loaded,"Loaded slot ""{slot}"" (Day {day})","Загружено ""{slot}"" (день {day})"
+msg.load.fail,Load FAIL: {error},Ошибка загрузки: {error}
+label.common.dash,—,—
+label.finance_debug.title,Finance Debug — bakery (read-only),Финансы — пекарня (только чтение)
+label.reputation.title,Player reputation,Репутация игрока
+label.reputation.demand_mult,Demand mult,Множ. спроса
+label.reputation.demand_mult_value,x{mult} demand,x{mult} спрос
+label.politics.cost_mult,Law cost mult,Множ. расходов (законы)
+label.politics.cost_mult_value,x{mult} daily cost,x{mult} расходов
+label.politics.section_title,Politics (read-only + campaign),Политика (чтение + агитация)
+label.politics.proposed,"Proposed: {id} ({name})","Предложено: {id} ({name})"
+label.politics.last_vote,Last vote: {summary},Последнее голосование: {summary}
+label.politics.active_laws,Active laws: {laws},Активные законы: {laws}
+label.politics.next_vote,Next vote: Day {day},След. голосование: день {day}
+label.politics.next_vote_none,Next vote: —,След. голосование: —
+label.finance_debug.storage_title,Storage (good → qty),Склад (товар → кол-во)
+label.finance_debug.prices_title,Prices (good → level → price),Цены (товар → ур. → цена)
+label.finance_debug.history_title,History (last 30 days),История (30 дней)
+label.finance_debug.hint,F6 to run. Speed x4 in main HUD. Council vote every 7 days from Day 7.,F6. Ускорение x4 в HUD. Голосование каждые 7 дней с дня 7.
+label.finance_debug.history_header,Day	Revenue	Expenses	Profit	Sales	Missed	Cash,День	Выручка	Расходы	Прибыль	Продажи	Упущ.	Касса
+label.finance_debug.price_row,{good}	Lv{level}	{price},{good}	ур.{level}	{price}
+label.finance_debug.storage_row,{good}	{qty},{good}	{qty}
+msg.campaign.fail,Campaign FAIL: {error},Агитация: {error}
+msg.politics.vote_summary,FOR {for} / AGAINST {against} — {result},ЗА {for} / ПРОТИВ {against} — {result}
+msg.politics.passed,PASSED,ПРИНЯТ
+msg.politics.rejected,REJECTED,ОТКЛОНЁН
+msg.politics.vote_debug,"D{day} {law}: FOR {for} / AGAINST {against} — {result}","D{day} {law}: ЗА {for} / ПРОТИВ {against} — {result}"
+msg.politics.campaign_applied,Campaign applied to {count} NPCs,Агитация: затронуто {count} NPC
+label.politics.effect_cost_mult,daily cost ×{mult},расходы ×{mult}
+label.politics.duration_permanent,permanent,навсегда
+label.politics.duration_days_left,{days} days left,осталось {days} дн.
+label.politics.no_effect,no effect,нет эффекта
+label.politics.active_law_line,"{name} ({effect}, {duration})","{name} ({effect}, {duration})"
+label.map.home,home,дом

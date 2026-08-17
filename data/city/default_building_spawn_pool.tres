@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="BuildingSpawnPool" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://data/city/building_spawn_pool.gd" id="1_pool"]
+[ext_resource type="Script" path="res://data/city/building_spawn_entry.gd" id="2_entry"]
+
+[sub_resource type="Resource" id="entry_house"]
+script = ExtResource("2_entry")
+id = "house"
+name_key = "building.house"
+slot_kinds = Array[String](["residential"])
+weight = 1.0
+
+[sub_resource type="Resource" id="entry_tavern"]
+script = ExtResource("2_entry")
+id = "tavern"
+name_key = "business.tavern"
+slot_kinds = Array[String](["commercial"])
+weight = 1.0
+business_type_id = "tavern"
+
+[resource]
+script = ExtResource("1_pool")
+id = "default"
+entries = [SubResource("entry_house"), SubResource("entry_tavern")]

@@ -1,0 +1,145 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://ui/debug_slice.gd" id="1_script"]
+
+[node name="DebugSlice" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Daily Demand Debug"
+
+[node name="CashLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Cash: —"
+
+[node name="StorageLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Storage: —"
+
+[node name="PriceLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Price (bread): —"
+
+[node name="PriceLevelLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Bread price level"
+
+[node name="PriceSlider" type="HSlider" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 24)
+layout_mode = 2
+min_value = 0.0
+max_value = 10.0
+step = 1.0
+value = 3.0
+tick_count = 11
+ticks_on_borders = true
+
+[node name="HistoryLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Daily revenue/expenses: —"
+
+[node name="LastTickLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Last tick: —"
+
+[node name="NpcTitle" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "NPCs (id | archetype | cash | last purchase)"
+
+[node name="NpcList" type="ItemList" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 180)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Controls" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="SlotNameEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/Controls"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+text = "default"
+placeholder_text = "slot name"
+
+[node name="SaveButton" type="Button" parent="MarginContainer/VBoxContainer/Controls"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Save"
+
+[node name="LoadButton" type="Button" parent="MarginContainer/VBoxContainer/Controls"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Load"
+
+[node name="LocaleEnButton" type="Button" parent="MarginContainer/VBoxContainer/Controls"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "EN"
+
+[node name="LocaleRuButton" type="Button" parent="MarginContainer/VBoxContainer/Controls"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "RU"
+
+[node name="BuyFlourButton" type="Button" parent="MarginContainer/VBoxContainer/Controls"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Buy flour x10"
+
+[node name="RunDemandButton" type="Button" parent="MarginContainer/VBoxContainer/Controls"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Run daily demand"
+
+[node name="ApplyDailyCostsButton" type="Button" parent="MarginContainer/VBoxContainer/Controls"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Apply daily costs"
+
+[node name="LogLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Log: —"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Controls/LocaleEnButton" to="." method="_on_locale_en_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Controls/LocaleRuButton" to="." method="_on_locale_ru_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Controls/SaveButton" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Controls/LoadButton" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Controls/BuyFlourButton" to="." method="_on_buy_flour_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Controls/RunDemandButton" to="." method="_on_run_demand_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Controls/ApplyDailyCostsButton" to="." method="_on_apply_daily_costs_pressed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/PriceSlider" to="." method="_on_price_slider_value_changed"]

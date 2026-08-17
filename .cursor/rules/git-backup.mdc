@@ -1,0 +1,11 @@
+---
+description: Git commit, push, backup, remote origin — только по явной просьбе пользователя
+alwaysApply: false
+---
+
+# Бэкап (Git / GitHub)
+
+- **Remote:** `https://github.com/demygivan/gorod-i-dinastiya.git` (`origin`)
+- **Ветка:** `main`
+- Коммит и push — **только по явной просьбе** («закоммить», «запушь», «сделай бэкап»).
+- Перед push проверь `git remote -v`; при смене URL: `git remote set-url origin <новый-url>`.

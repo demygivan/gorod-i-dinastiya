@@ -1,0 +1,173 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://ui/hud.gd" id="1_hud"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_hud")
+
+[node name="TopBar" type="PanelContainer" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 48.0
+grow_horizontal = 2
+
+[node name="HBox" type="HBoxContainer" parent="TopBar"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="TimeLabel" type="Label" parent="TopBar/HBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Day 1, 08:00"
+
+[node name="StatusLabel" type="Label" parent="TopBar/HBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Simulation: running"
+
+[node name="DemandPanel" type="PanelContainer" parent="."]
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 56.0
+offset_right = 300.0
+offset_bottom = -220.0
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="DemandPanel"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="DemandTitle" type="Label" parent="DemandPanel/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "City demand"
+
+[node name="DemandList" type="ItemList" parent="DemandPanel/VBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(280, 200)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GoodsPanel" type="PanelContainer" parent="."]
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = 56.0
+offset_bottom = -220.0
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="GoodsPanel"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="GoodsTitle" type="Label" parent="GoodsPanel/VBox"]
+layout_mode = 2
+text = "Товары (Guild 2)"
+
+[node name="GoodsList" type="ItemList" parent="GoodsPanel/VBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(280, 200)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="BottomPanel" type="PanelContainer" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -220.0
+offset_left = 308.0
+offset_right = -308.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBox" type="VBoxContainer" parent="BottomPanel"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="BusinessLabel" type="Label" parent="BottomPanel/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Business: Пекарня"
+
+[node name="CashLabel" type="Label" parent="BottomPanel/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Cash: 500"
+
+[node name="StorageLabel" type="Label" parent="BottomPanel/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Storage: —"
+
+[node name="PriceLabel" type="Label" parent="BottomPanel/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Хлеб: ур.3"
+
+[node name="PriceLevelLabel" type="Label" parent="BottomPanel/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Хлеб: ур. 3 (-5% к базе)"
+
+[node name="PriceSlider" type="HSlider" parent="BottomPanel/VBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(280, 24)
+layout_mode = 2
+min_value = 0.0
+max_value = 10.0
+step = 1.0
+value = 3.0
+tick_count = 11
+ticks_on_borders = true
+
+[node name="DailyLabel" type="Label" parent="BottomPanel/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Today revenue: 0 | expenses: 0 | missed: 0"
+
+[node name="LastTickLabel" type="Label" parent="BottomPanel/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Last tick: —"
+
+[node name="Controls" type="HBoxContainer" parent="BottomPanel/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="PauseButton" type="Button" parent="BottomPanel/VBox/Controls"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Pause"
+
+[node name="SpeedX1Button" type="Button" parent="BottomPanel/VBox/Controls"]
+layout_mode = 2
+text = "x1"
+
+[node name="SpeedX2Button" type="Button" parent="BottomPanel/VBox/Controls"]
+layout_mode = 2
+text = "x2"
+
+[node name="SpeedX4Button" type="Button" parent="BottomPanel/VBox/Controls"]
+layout_mode = 2
+text = "x4"
+
+[node name="BuyFlourButton" type="Button" parent="BottomPanel/VBox/Controls"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Buy flour x10"
+
+[node name="ActionLogLabel" type="Label" parent="BottomPanel/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Спрос жителей — каждый день в 10:00"
+
+[connection signal="pressed" from="BottomPanel/VBox/Controls/PauseButton" to="." method="_on_pause_pressed"]
+[connection signal="pressed" from="BottomPanel/VBox/Controls/SpeedX1Button" to="." method="_on_speed_pressed" binds= [1]]
+[connection signal="pressed" from="BottomPanel/VBox/Controls/SpeedX2Button" to="." method="_on_speed_pressed" binds= [2]]
+[connection signal="pressed" from="BottomPanel/VBox/Controls/SpeedX4Button" to="." method="_on_speed_pressed" binds= [4]]
+[connection signal="pressed" from="BottomPanel/VBox/Controls/BuyFlourButton" to="." method="_on_buy_flour_pressed"]
+[connection signal="value_changed" from="BottomPanel/VBox/PriceSlider" to="." method="_on_price_slider_value_changed"]

@@ -2,9 +2,8 @@
 
 ## Как открыть
 
-1. **Godot:** Godot Engine 4.3+ → "Import" → выбери эту папку → Play.
-   В `GameState` уже будет тестовая семья/персонаж/ферма, нанятая через
-   `HireWorkerCommand` (см. `world/main.gd`).
+1. **Godot:** Godot Engine **4.7** → "Import" → выбери эту папку → Play (`world/main.tscn`).
+   В `GameState` уже будут два демо-предприятия на карте-заглушке.
 2. **Cursor:** открой эту же папку как проект. `.cursor/rules/godot-architecture.mdc`
    подключается автоматически на каждый твой запрос (это инструкция, не сама
    спека) и говорит агенту: для задач по геймдизайну/механикам/архитектуре —
@@ -26,4 +25,4 @@
 
 `core/data` = состояние, `core/commands` = как его менять, `core/systems`
 = что происходит само по времени, `world`/`ui` = картинка, `autoloads`
-= глобальные синглтоны (GameClock/GameState/EventBus).
+= глобальные синглтоны (SimulationClock/GameState/EventBus/CommandProcessor).
